@@ -7,7 +7,7 @@ import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721Enumer
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract InspireNFT is
+contract InspireNFT1 is
     Initializable,
     OwnableUpgradeable,
     UUPSUpgradeable,

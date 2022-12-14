@@ -3,7 +3,7 @@ const { ethers, upgrades } = require("hardhat");
 
 // Deploy Proxy Combatible New Contract
 async function main() {
-  const INFT2 = await hre.ethers.getContractFactory("InspireNFT2");
+  const INFT2 = await hre.ethers.getContractFactory("InspireNFT");
   const lock = await hre.upgrades.deployProxy(
     INFT2,
     { kind: "uups" },
@@ -13,9 +13,9 @@ async function main() {
 }
 
 // Deploy Proxy
-// const PROXY = "CONTRACT_ADDRESS_WE_GOT_BEFORE";
+// const PROXY = "0xd5dF5BBcDD3467f5F65EEfBd62f8dB182Eb907E5";
 // async function main() {
-//   const INFT2 = await hre.ethers.getContractFactory("InspireNFT2");
+//   const INFT2 = await hre.ethers.getContractFactory("InspireNFT");
 //   await hre.upgrades.upgradeProxy(PROXY, INFT2);
 //   console.log("Updated");
 // }
