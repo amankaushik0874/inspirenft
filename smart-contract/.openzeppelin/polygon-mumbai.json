@@ -179,6 +179,21 @@
       "address": "0x80F4cB57167E8eBd7baa8b0171C7e46E223c7C95",
       "txHash": "0xd96098aede5cdc85b72fd16b73c418545a0e7dcee5d01cd9d77b1978537a62d0",
       "kind": "uups"
+    },
+    {
+      "address": "0x987e1600BEC5F02dEebdCBA8B2d10041266A40f9",
+      "txHash": "0x2d7a344d565b95ab30043be3ef0001e80b80d4917d2a15be44fde392a375a8b0",
+      "kind": "uups"
+    },
+    {
+      "address": "0x9FB703FBe68eaA24020FE5C25CA24d8c84C3C263",
+      "txHash": "0xb61aa7b3a95c51de92cd377f823fb5420fddd54f0fc2a4061b7f892fae72d665",
+      "kind": "uups"
+    },
+    {
+      "address": "0x88F146CF2326187B29f6c5cED47B8d7be91deEc4",
+      "txHash": "0x4a4e21d8123263e53d3980f8672553031f96a04fab6d3be954c5bfc1ac044800",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -7115,6 +7130,2560 @@
             "numberOfBytes": "32"
           },
           "t_struct(Nft)3927_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "c1bd98206aaf07d703a9e50d104011912094415173341f34c1b7725fa9ca463c": {
+      "address": "0x67a88d3e54347d4f2E84Ac2421bF4d1b38030E4D",
+      "txHash": "0x66ce649c316f54d7c2fc9f2941bf60c0bcecd0008fc1ecc09672aed79356938d",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)3921_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:18"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3932_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_struct(Counter)3027_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)3027_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3932_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)3921_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3932_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)3027_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)3921_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "7bc636219a5baa2b378c27d981439e386c7942a8503f248f252e1ff0a10278b0": {
+      "address": "0xC5D93c8279260954aD08000b3b7C3251b7D5fb22",
+      "txHash": "0x2cfdf5660dba46ac8ab2a5c2edb591200dcefc584d851d7adcf937f2441fe18f",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2988_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:18"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)2999_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)2999_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2988_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)2999_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2988_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "5ce34c02581f2b201c013f73352398527b9342521804b98f80fd4bd2c3848d51": {
+      "address": "0x4D9B8D32e84A6B2989151DB757a88F27Ea13d51B",
+      "txHash": "0x990e7b068897b68552675d5574ac66ccdbf4f8faef16b3c94bf7259493959e4a",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2988_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:18"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)2999_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)2999_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2988_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)2999_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2988_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "d386f9717cfedbb08e5f39644dc03f622986bb24d9cad2305ef21d8afd9ec948": {
+      "address": "0xef298A31fF07DbcAC6F63334D9C7869ad55C7911",
+      "txHash": "0xaca5a6cd02c7ab7953aade2beea8b2ca40e34b3355cf75e30db3127125e8c04f",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2988_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:18"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)2999_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)2999_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2988_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)2999_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2988_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "771f90594c4ab80126e4646776f0fe46dc2331858190dc5c929604e22a30e191": {
+      "address": "0xf4c5Db6eEED3A7146b2Ef7f09F1a179b84d7f728",
+      "txHash": "0x7635e0e25844f1f083cc91328bcd412595bd30f1afc0a24459f796dd77090539",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2992_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3003_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3003_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2992_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3003_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2992_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "36171b3976e1ed413dca788dfdd5a2ee799b95eadf81de51b854172c69f8bd85": {
+      "address": "0xE9D455E32728aAccA1995D3eF52394981584D7ab",
+      "txHash": "0xa2b47cda0006b52e348c653a57ed5df7f6035cb0531071d7008b551d7961bed0",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2992_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3003_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3003_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2992_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3003_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2992_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "b95f8e1b99ce9e2ff9d3565f7777a03597b20201fc1f587b7e7ddc43a1ac75e9": {
+      "address": "0xc86413321D98491Edb588165F6358b0Dd470f907",
+      "txHash": "0x29155bc2cf75bab50ff989f1cbce6510d310924f985643305594534f69b84b10",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2992_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3003_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3003_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2992_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3003_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2992_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "3049d3a53b48964a085258c9190b5e12e3be7838c0f4f963b42669487cc57ef7": {
+      "address": "0x8e0758eca37E125E3E85755e9B982aA2fe491e69",
+      "txHash": "0x8ead7186d000e307f8db63ca3e0981fc84f87e0ef5a22710f10a454a84b25114",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2992_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3003_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3003_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2992_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3003_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2992_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "81406d91e0e379b33550069562ce545438ec8d8862eeada83808546f8faa5db1": {
+      "address": "0x1A05f75785aA6E27fE62c9798D9ec836f5e1B748",
+      "txHash": "0xba6fbb9e9599bf9d4fe2926dd6bfedb6286ea8fda7f54781003d941eb4adf994",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)2992_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3003_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)2638_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3003_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)2992_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3003_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)2638_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)2992_storage": {
+            "label": "struct InspireNFT.Nft",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "uploadTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenURI",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "minter",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "b7ba8018cc98b35beef8cc689de0af08f1755744cae43bca0979331c41f59de0": {
+      "address": "0x00C4BaCb52d525A18051436eC69eAdEd9f59e2cF",
+      "txHash": "0x4fccd51a539ec29c3f159ccdbfaebcec84594a23418492342efe10b136360709",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "nfts",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_mapping(t_uint256,t_struct(Nft)3928_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:19"
+          },
+          {
+            "label": "collections",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_mapping(t_uint256,t_struct(Collection)3939_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:20"
+          },
+          {
+            "label": "tokenURI",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:21"
+          },
+          {
+            "label": "collectionIdforToken",
+            "offset": 0,
+            "slot": "204",
+            "type": "t_array(t_uint8)dyn_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:22"
+          },
+          {
+            "label": "_tokenIdCounter",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_struct(Counter)3027_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:23"
+          },
+          {
+            "label": "_tokenIdCounter2",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_struct(Counter)3027_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:24"
+          },
+          {
+            "label": "_collectionIdCounter",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_struct(Counter)3027_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:25"
+          },
+          {
+            "label": "baseTokenUri",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:26"
+          },
+          {
+            "label": "baseTokenUriExt",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_string_storage",
+            "contract": "InspireNFT",
+            "src": "contracts\\InspireNFT2.sol:27"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint8)dyn_storage": {
+            "label": "uint8[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Collection)3939_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Collection)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Nft)3928_storage)": {
+            "label": "mapping(uint256 => struct InspireNFT.Nft)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Collection)3939_storage": {
+            "label": "struct InspireNFT.Collection",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "imgLink",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(Counter)3027_storage": {
+            "label": "struct Counters.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Nft)3928_storage": {
             "label": "struct InspireNFT.Nft",
             "members": [
               {

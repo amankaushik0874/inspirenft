@@ -13,7 +13,7 @@ async function main() {
 }
 
 // Deploy Proxy
-// const PROXY = "0xd5dF5BBcDD3467f5F65EEfBd62f8dB182Eb907E5";
+// const PROXY = "0x88F146CF2326187B29f6c5cED47B8d7be91deEc4";
 // async function main() {
 //   const INFT2 = await hre.ethers.getContractFactory("InspireNFT");
 //   await hre.upgrades.upgradeProxy(PROXY, INFT2);
