@@ -1,37 +1,33 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
+import "./Interfaces/ERC721AUpgradeable.sol";
 
-contract InspireNFT3 is
+contract InspireNFT is
     Initializable,
     OwnableUpgradeable,
     UUPSUpgradeable,
-    ERC721EnumerableUpgradeable,
-    ERC721URIStorageUpgradeable
+    ERC721AUpgradeable
 {
     using Counters for Counters.Counter;
     mapping(uint256 => Nft) public nfts;
     mapping(uint256 => Collection) public collections;
-    mapping(uint256 => Nft[]) public collectionNfts;
-    mapping(uint256 => Collection) public nftCollection;
+    mapping(uint256 => string) public tokenURI;
+    uint8[] public collectionIdforToken;
     Counters.Counter private _tokenIdCounter;
+    Counters.Counter private _tokenIdCounter2;
     Counters.Counter private _collectionIdCounter;
+    string internal baseTokenUri;
+    string internal baseTokenUriExt;
     struct Nft {
         uint256 id;
-        string _tokenURI;
-        string fileHash;
-        uint256 fileSize;
-        string fileType;
-        string fileName;
-        string name;
-        string description;
         uint256 uploadTime;
-        string externalId;
+        string tokenURI;
         address minter;
     }
     struct Collection {
@@ -43,15 +39,8 @@ contract InspireNFT3 is
     }
     event MintedNFT(
         uint256 id,
-        string _tokenURI,
-        string fileHash,
-        uint256 fileSize,
-        string fileType,
-        string fileName,
-        string name,
-        string description,
         uint256 uploadTime,
-        string externalId,
+        string tokenURI,
         address minter
     );
     event NewCollection(
@@ -62,45 +51,13 @@ contract InspireNFT3 is
         address owner
     );
 
-    function initialize() public initializer {
-        __ERC721_init("Inspire NFT", "INFT");
+    function initialize() public initializerERC721A initializer {
+        __ERC721A_init("Inspire NFT", "INFT");
         __Ownable_init();
+        _tokenIdCounter = Counters.Counter(0);
     }
 
     function _authorizeUpgrade(address) internal override onlyOwner {}
-
-    function _beforeTokenTransfer(
-        address from,
-        address to,
-        uint256 tokenId
-    ) internal override(ERC721Upgradeable, ERC721EnumerableUpgradeable) {
-        super._beforeTokenTransfer(from, to, tokenId);
-    }
-
-    function _burn(uint256 tokenId)
-        internal
-        override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
-    {
-        super._burn(tokenId);
-    }
-
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
-        returns (string memory)
-    {
-        return super.tokenURI(tokenId);
-    }
-
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721Upgradeable, ERC721EnumerableUpgradeable)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
 
     function addCollection(
         string memory _name,
@@ -108,6 +65,7 @@ contract InspireNFT3 is
         string memory _imgLink,
         address _owner
     ) public onlyOwner returns (uint256) {
+        _collectionIdCounter.increment();
         uint256 _collectionId = _collectionIdCounter.current();
         Collection memory col = Collection(
             _collectionId,
@@ -124,24 +82,7 @@ contract InspireNFT3 is
             _imgLink,
             _owner
         );
-        _collectionIdCounter.increment();
         return _collectionId;
-    }
-
-    function addNftToCollection(uint256 _idNft, uint256 _idCollection)
-        public
-        onlyOwner
-    {
-        require(
-            msg.sender == nfts[_idNft].minter,
-            "Caller is not owner of NFT"
-        );
-        require(
-            msg.sender == collections[_idCollection].owner,
-            "Caller is not owner of Collection"
-        );
-        nftCollection[_idNft] = collections[_idCollection];
-        collectionNfts[_idCollection].push(nfts[_idNft]);
     }
 
     function editCollection(
@@ -164,71 +105,62 @@ contract InspireNFT3 is
 
     function deleteCollection(uint256 _collectionIdToDel) public onlyOwner {
         delete collections[_collectionIdToDel];
-        delete collectionNfts[_collectionIdToDel];
-        for (uint256 i = 0; i < _collectionIdCounter.current(); i++) {
-            if (nftCollection[i].id == _collectionIdToDel) {
-                delete nftCollection[i];
+        for (uint256 i = 0; i < _tokenIdCounter.current(); i++) {
+            if (collectionIdforToken[i] == _collectionIdToDel) {
+                delete collectionIdforToken[i];
             }
         }
     }
 
-    function mint(
+    function setTokenURI(uint256 _tokenId, string memory _uri) internal onlyOwner {
+        require(bytes(_uri).length > 0, "Invalid URI.");
+        tokenURI[_tokenId] = _uri;
+    }
+
+    function batchMint(
         address _wallet,
-        string memory _tokenURI,
-        string memory _fileHash,
-        uint256 _fileSize,
-        string memory _fileType,
-        string memory _fileName,
-        string memory _name,
-        string memory _description,
-        string memory _externalId
-    ) public onlyOwner returns (uint256) {
-        // Make sure the file hash exists
-        require(bytes(_fileHash).length > 0);
-        // Make sure file type exists
-        require(bytes(_fileType).length > 0);
-        // Make sure file description exists
-        require(bytes(_name).length > 0);
-        // Make sure file description exists
-        require(bytes(_description).length > 0);
-        // Make sure file fileName exists
-        require(bytes(_fileName).length > 0);
-        // Make sure uploader address exists
-        require(msg.sender != address(0));
-        // Make sure file size is more than 0
-        require(_fileSize > 0);
+        uint256 NFTamount,
+        string memory _tokenURI
+    ) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
-        // Add NFT to the contract
-        nfts[tokenId] = Nft(
-            tokenId,
-            _tokenURI,
-            _fileHash,
-            _fileSize,
-            _fileType,
-            _fileName,
-            _name,
-            _description,
-            block.timestamp,
-            _externalId,
-            msg.sender
-        );
-        _safeMint(_wallet, tokenId);
-        _setTokenURI(tokenId, _tokenURI);
-        emit MintedNFT(
-            tokenId,
-            _tokenURI,
-            _fileHash,
-            _fileSize,
-            _fileType,
-            _fileName,
-            _name,
-            _description,
-            block.timestamp,
-            _externalId,
-            msg.sender
-        );
-        //increment token id
-        _tokenIdCounter.increment();
-        return tokenId;
+        nfts[tokenId] = Nft(tokenId, block.timestamp, _tokenURI, msg.sender);
+        _mint(_wallet, NFTamount);
+        emit MintedNFT(tokenId, block.timestamp, _tokenURI, msg.sender);
+        for (uint256 j = tokenId; j < tokenId + NFTamount; j++) {
+            collectionIdforToken.push(0);
+        }
+        for (uint256 i = 0; i < NFTamount; i++) {
+            setTokenURI(tokenId, _tokenURI);
+            _tokenIdCounter.increment();
+            tokenId++;
+        }
+    }
+
+    function batchMint(
+        address _wallet,
+        uint256 NFTamount,
+        string memory _tokenURI,
+        uint8 collectionID
+    ) public onlyOwner {
+        uint256 tokenId = _tokenIdCounter.current();
+        nfts[tokenId] = Nft(tokenId, block.timestamp, _tokenURI, msg.sender);
+        _mint(_wallet, NFTamount);
+        emit MintedNFT(tokenId, block.timestamp, _tokenURI, msg.sender);
+        for (uint256 j = tokenId; j < tokenId + NFTamount; j++) {
+            collectionIdforToken.push(collectionID);
+        }
+        for (uint256 i = 0; i < NFTamount; i++) {
+            setTokenURI(tokenId, _tokenURI);
+            _tokenIdCounter.increment();
+            tokenId++;
+        }
+    }
+
+    function showData(uint256 tokenID) public view returns (uint256) {
+        for (uint256 i = 0; i <= _tokenIdCounter.current(); i++) {
+            if (tokenID == i) {
+                return collectionIdforToken[i];
+            }
+        }
     }
 }
